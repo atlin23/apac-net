@@ -17,8 +17,6 @@ class DiscNet(torch.nn.Module):
         self.act_func = act_func
         self.psi_func = psi_func
 
-        self.lintt = torch.nn.Linear(1, dim)
-
         self.dim = dim
         self.hh = hh
         self.TT = TT
@@ -53,8 +51,6 @@ class GenNet(torch.nn.Module):
         self.lin3 = torch.nn.Linear(ns, ns)
         self.linlast = torch.nn.Linear(int(ns), dim)
         self.act_func = act_func
-
-        self.lintt = torch.nn.Linear(1, dim, bias=True)
 
         self.dim = dim
         self.hh = hh
